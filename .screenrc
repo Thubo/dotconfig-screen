@@ -99,7 +99,7 @@ bind _ resize max
 # hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n+%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d.%m.%y %{g}]'
 # caption always                               # caption is up the hardstatus, so you get 2 lines at the bottom; Only needed it you intend to use splits
 # caption string "%{= kw}%=%{= kw}[ %-w%{Gk}%n%f%u%t%{kw}%+w ]%=" # nice and smooth caption
-# hardstatus on 
+# hardstatus on
 # hardstatus alwayslastline
 
 # Backticks - Just a few simple examples
@@ -111,7 +111,7 @@ backtick 0 600 600 sh -c 'screen -ls | grep --color=no -o "$PPID[^[:space:]]*"' 
 # hardstatus string '%{= kW}[ %H:%0` ]%=%{= kw}[ %-w%{Gk}%n%f%u%t%{kw}%+w ]%=%{kW}[ %m/%d/%y %{W}%c:%s ]'        # [HOST:PID.NAME] [WINDOWS] [DATE TIME]
 
 # In case you do not want to use split often, use the following lines
-hardstatus on 
+hardstatus on
 caption off
 hardstatus alwayslastline
 hardstatus string '%{= kW}[ %H:%0` ]%=%{= kw}[ %-w%{Gk}%n%f%u%t%{kw}%+w ]%=%{kW}[ %m/%d/%y %{W}%c:%s ]'
