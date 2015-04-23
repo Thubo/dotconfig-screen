@@ -7,6 +7,7 @@
 #
 # General Stuff
 #
+logfile $HOME/screenlog-%Y%m%d-%c:%s                            # Reasonable names for logfiles
 autodetach on                                                   # Never, ever turn this off.
 startup_message off                                             # Don't display the copyright page
 msgwait 2                                                       # message timeout
