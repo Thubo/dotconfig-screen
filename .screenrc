@@ -19,7 +19,7 @@ altscreen on                                                    # restore displa
 defutf8 on                                                      # Run everything in UTF-8.
 encoding utf8                                                   # UTF-8 Stuff
 defscrollback 5000                                              # too much scrollback lines will mess with putty so don't be too greedy
-nethack on                                                      # print wackier status messages
+nethack off                                                     # disable wackier status messages
 defflow off                                                     # disable Ctrl-S/Ctrl-Q "flow control"
 pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended." # emulate .logout message
 shell -$SHELL                                                   # make the shell in every window a login shell
@@ -113,7 +113,9 @@ backtick 0 600 600 sh -c 'screen -ls | grep --color=no -o "$PPID[^[:space:]]*"' 
 
 # In case you do not want to use split often, use the following lines
 hardstatus on
-caption off
+# caption off
+# To fix: .screenrc: usage: caption always|splitonly|string <string>
+caption string "Caption"
 hardstatus alwayslastline
 hardstatus string '%{= kW}[ %H:%0` ]%=%{= kw}[ %-w%{Gk}%n%f%u%t%{kw}%+w ]%=%{kW}[ %m/%d/%y %{W}%c:%s ]'
 
@@ -123,6 +125,11 @@ hardstatus string '%{= kW}[ %H:%0` ]%=%{= kw}[ %-w%{Gk}%n%f%u%t%{kw}%+w ]%=%{kW}
 # hardstatus on
 # hardstatus alwayslastline
 # hardstatus string '%{= kW}[ %H:%0` ]%=%{= kw}%=%{kW}[ %m/%d/%y %{W}%c:%s ]'     # [HOST:PID.NAME] [WINDOWS] [DATE TIME]
+###############################################################################
+
+###############################################################################
+# Windowlist
+windowlist string "%3n %t   %h%=%f"
 ###############################################################################
 
 ###############################################################################
